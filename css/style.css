@@ -2077,6 +2077,12 @@ input[type="radio"] {
   color: #CDB9A3;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Texto curto dos links: só aparece no celular */
+.barra-modo-links .texto-curto {
+  display: none;
 }
 
 .barra-modo-links a:hover {
@@ -2408,6 +2414,7 @@ tr:last-child td {
   font-family: var(--fonte-texto);
   font-size: 13px;
   font-weight: 700;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -2559,16 +2566,26 @@ tr:last-child td {
   }
 }
 
-/* Celular pequeno: a barra do protótipo fica mais compacta para caber na tela */
+/* Celular: a barra do protótipo fica mais compacta, com textos curtos e numa linha só */
 @media (max-width: 480px) {
   .barra-modo-rotulo,
-  .link-guia,
-  .seletor-modo .icone {
+  .seletor-modo .icone,
+  .barra-modo-links .texto-completo {
     display: none;
   }
 
+  .barra-modo-links .texto-curto {
+    display: inline;
+  }
+
+  .barra-modo-links {
+    gap: 14px;
+  }
+
   .seletor-modo button {
+    height: 26px;
     padding: 0 10px;
+    font-size: 12px;
   }
 }
 

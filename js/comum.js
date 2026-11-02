@@ -399,12 +399,15 @@ function htmlBarraModo() {
     botoes += '<button class="' + classe + '" onclick="trocarModo(\'' + modos[i].valor + '\')">' + icone(modos[i].icone) + modos[i].nome + "</button>";
   }
 
-  // Atalhos só do protótipo: acesso da equipe e guia de marca ficam fora do site do cliente
+  // Atalhos só do protótipo: acesso da equipe e guia de marca ficam fora do site do cliente.
+  // Cada link tem um texto completo e um curto; no celular só o curto aparece (ver style.css)
   return '<div class="barra-modo"><div class="container">' +
     '<div class="barra-modo-links">' +
     '<span class="barra-modo-rotulo">Protótipo</span>' +
-    '<a href="equipe.html">' + icone("cadeado") + "Acesso da equipe</a>" +
-    '<a href="design-system.html" class="link-guia">Guia de marca</a>' +
+    '<a href="equipe.html">' + icone("cadeado") +
+    '<span class="texto-completo">Acesso da equipe</span><span class="texto-curto">Equipe</span></a>' +
+    '<a href="design-system.html" class="link-guia">' +
+    '<span class="texto-completo">Guia de marca</span><span class="texto-curto">Guia</span></a>' +
     "</div>" +
     '<div class="seletor-modo" role="group" aria-label="Visualizar como">' + botoes + "</div>" +
     "</div></div>";
