@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#B5502A">
+  <title>Cardápio - Raízes do Nordeste</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <header id="cabecalho"></header>
+
+  <main class="container pagina pagina-com-barra">
+    <div class="pagina-topo">
+      <div>
+        <span class="sobretitulo">Cardápio</span>
+        <h1 id="nomeUnidade"></h1>
+        <p id="infoUnidade" class="texto-suave"></p>
+      </div>
+      <button class="botao botao-secundario botao-pequeno" onclick="abrirSeletorUnidade()"><span data-icone="local"></span>Trocar unidade</button>
+    </div>
+
+    <div id="filtros" class="chips"></div>
+    <p id="avisoJunino" class="mensagem aviso escondido"></p>
+
+    <div id="listaProdutos" class="grade-produtos"></div>
+  </main>
+
+  <a id="barraCarrinho" href="carrinho.html" class="barra-carrinho escondido"></a>
+
+  <footer id="rodape"></footer>
+
+  <script src="js/dados.js?v=9"></script>
+  <script src="js/comum.js?v=9"></script>
+  <script src="js/cardapio.js?v=9"></script>
+</body>
+</html>

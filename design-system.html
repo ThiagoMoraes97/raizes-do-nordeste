@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#B5502A">
+  <title>Guia de Marca - Raízes do Nordeste</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <header id="cabecalho"></header>
+
+  <main class="container pagina">
+    <div class="pagina-topo">
+      <div>
+        <span class="sobretitulo">Identidade visual</span>
+        <h1>Guia de marca e design system</h1>
+        <p class="texto-suave">Regras visuais e componentes usados em todos os canais: aplicativo, totem e site.</p>
+      </div>
+    </div>
+
+    <!-- Conceito e logo -->
+    <section class="cartao ds-secao">
+      <h2>1. Conceito e logotipo</h2>
+      <p>
+        O símbolo mostra o <strong>sol do sertão nascendo sobre a terra</strong>, com <strong>raízes</strong> por baixo:
+        tradição (raízes) e o começo do dia (o café da manhã, principal momento de consumo da rede).
+        As cores vêm do barro, do sol, do mandacaru e do café. A tipografia com serifa traz o lado artesanal e
+        a fonte sem serifa garante leitura fácil em telas pequenas e no totem.
+      </p>
+      <div class="ds-logos">
+        <div class="ds-logo">
+          <a href="index.html" class="marca"><img src="img/logo.svg" alt="Logotipo Raízes do Nordeste"><span class="marca-nome">Raízes<small>do Nordeste</small></span></a>
+        </div>
+        <div class="ds-logo ds-logo-escuro">
+          <a href="index.html" class="marca"><img src="img/logo.svg" alt="Logotipo Raízes do Nordeste em fundo escuro"><span class="marca-nome">Raízes<small>do Nordeste</small></span></a>
+        </div>
+      </div>
+      <p class="ajuda">Área de respiro mínima: metade da altura do símbolo. Tamanho mínimo do símbolo: 32 px.</p>
+    </section>
+
+    <!-- Cores -->
+    <section class="cartao ds-secao">
+      <h2>2. Cores</h2>
+      <div class="ds-cores">
+        <div class="amostra"><div class="amostra-cor" style="background: #B5502A;"></div><div class="amostra-info"><strong>Terracota</strong><code>#B5502A</code><br>Ações principais e marca</div></div>
+        <div class="amostra"><div class="amostra-cor" style="background: #F2B544;"></div><div class="amostra-info"><strong>Sol</strong><code>#F2B544</code><br>Destaques e fidelidade</div></div>
+        <div class="amostra"><div class="amostra-cor" style="background: #3E6B48;"></div><div class="amostra-info"><strong>Mandacaru</strong><code>#3E6B48</code><br>Sucesso e confirmação</div></div>
+        <div class="amostra"><div class="amostra-cor" style="background: #2B1D14;"></div><div class="amostra-info"><strong>Café</strong><code>#2B1D14</code><br>Textos e fundos escuros</div></div>
+        <div class="amostra"><div class="amostra-cor" style="background: #FBF6EE;"></div><div class="amostra-info"><strong>Areia</strong><code>#FBF6EE</code><br>Fundo das telas</div></div>
+        <div class="amostra"><div class="amostra-cor" style="background: #EBDFD0;"></div><div class="amostra-info"><strong>Borda</strong><code>#EBDFD0</code><br>Divisões e contornos</div></div>
+        <div class="amostra"><div class="amostra-cor" style="background: #B42318;"></div><div class="amostra-info"><strong>Erro</strong><code>#B42318</code><br>Erros e ações perigosas</div></div>
+        <div class="amostra"><div class="amostra-cor" style="background: #2D5F8B;"></div><div class="amostra-info"><strong>Informação</strong><code>#2D5F8B</code><br>Avisos de privacidade</div></div>
+      </div>
+      <p class="ajuda">Todas as combinações de texto usadas passam no contraste mínimo AA da WCAG.</p>
+    </section>
+
+    <!-- Tipografia -->
+    <section class="cartao ds-secao">
+      <h2>3. Tipografia</h2>
+      <div class="ds-tipo"><small>Fraunces 700 · 38 px · Título da página</small><h1 style="margin: 0;">Cuscuz quentinho</h1></div>
+      <div class="ds-tipo"><small>Fraunces 700 · 22 px · Título de seção</small><h2 style="margin: 0;">Promoções da semana</h2></div>
+      <div class="ds-tipo"><small>Fraunces 700 · 18 px · Título de cartão</small><h3 style="margin: 0;">Tapioca de carne de sol</h3></div>
+      <div class="ds-tipo"><small>DM Sans 400 · 16 px · Texto</small><p style="margin: 0;">Peça pelo app, pelo totem ou pelo site e retire no balcão sem fila.</p></div>
+      <div class="ds-tipo"><small>DM Sans 700 · 12 px · Sobretítulo</small><span class="sobretitulo" style="margin: 0;">Cardápio</span></div>
+    </section>
+
+    <!-- Componentes -->
+    <section class="cartao ds-secao">
+      <h2>4. Botões</h2>
+      <div class="ds-linha">
+        <button class="botao">Principal</button>
+        <button class="botao botao-secundario">Secundário</button>
+        <button class="botao botao-sol">Destaque</button>
+        <button class="botao botao-fantasma">Discreto</button>
+        <button class="botao botao-perigo">Perigo</button>
+        <button class="botao" disabled>Desabilitado</button>
+      </div>
+      <div class="ds-linha">
+        <button class="botao botao-pequeno"><span data-icone="mais"></span>Adicionar</button>
+        <button class="botao botao-secundario botao-pequeno">Pequeno</button>
+      </div>
+    </section>
+
+    <section class="cartao ds-secao">
+      <h2>5. Campos e opções</h2>
+      <div class="campo">
+        <label for="exemploCampo">Campo de texto</label>
+        <input type="text" id="exemploCampo" placeholder="Digite aqui">
+        <p class="ajuda">Texto de ajuda abaixo do campo.</p>
+      </div>
+      <div class="grade-opcoes" style="margin-bottom: 12px;">
+        <button class="opcao-cartao selecionado"><span class="icone-caixa" data-icone="pix"></span><span><strong>Opção selecionada</strong><small>Borda terracota</small></span></button>
+        <button class="opcao-cartao"><span class="icone-caixa" data-icone="cartao"></span><span><strong>Opção normal</strong><small>Borda neutra</small></span></button>
+      </div>
+      <label class="opcao-check"><input type="checkbox" checked><span>Consentimento opcional (LGPD)</span></label>
+      <div class="chips">
+        <button class="chip ativo">Todos</button>
+        <button class="chip">Tapiocas</button>
+        <button class="chip">Cuscuz</button>
+      </div>
+    </section>
+
+    <section class="cartao ds-secao">
+      <h2>6. Selos e mensagens</h2>
+      <div class="ds-linha">
+        <span class="selo selo-sol">Recebido</span>
+        <span class="selo selo-terracota">Em preparo</span>
+        <span class="selo selo-verde">Pronto para retirada</span>
+        <span class="selo">Entregue</span>
+        <span class="selo selo-erro">Cancelado</span>
+      </div>
+      <p class="mensagem sucesso"><span data-icone="check"></span><span>Sucesso: pagamento aprovado.</span></p>
+      <p class="mensagem erro"><span data-icone="info"></span><span>Erro: pagamento recusado pela operadora.</span></p>
+      <p class="mensagem aviso"><span data-icone="relogio"></span><span>Aviso: aguardando o serviço de pagamento.</span></p>
+      <p class="mensagem info"><span data-icone="escudo"></span><span>Informação: não guardamos dados do cartão.</span></p>
+    </section>
+
+    <section class="cartao ds-secao">
+      <h2>7. Cartão de produto e status do pedido</h2>
+      <div class="grade-produtos" style="margin-bottom: 24px;">
+        <article class="produto">
+          <div class="produto-imagem"><img src="img/fotos/tapioca-carne.jpg" alt=""></div>
+          <div class="produto-corpo">
+            <h3>Tapioca de carne de sol</h3>
+            <p>Com queijo coalho.</p>
+            <div class="produto-rodape"><span class="preco">R$ 18,90</span><button class="botao botao-pequeno"><span data-icone="mais"></span>Adicionar</button></div>
+          </div>
+        </article>
+        <article class="produto produto-indisponivel indisponivel">
+          <div class="produto-imagem"><span class="selo selo-verde">Junino</span><img src="img/fotos/pamonha.jpg" alt=""></div>
+          <div class="produto-corpo">
+            <h3>Pamonha</h3>
+            <p>Estado indisponível (fora da época).</p>
+            <div class="produto-rodape"><span class="preco">R$ 9,00</span><span class="selo">Só em junho e julho</span></div>
+          </div>
+        </article>
+      </div>
+      <ol class="etapas">
+        <li class="etapa feita"><span class="etapa-marcador" data-icone="check"></span><span>Recebido</span></li>
+        <li class="etapa atual"><span class="etapa-marcador">2</span><span>Em preparo</span></li>
+        <li class="etapa"><span class="etapa-marcador">3</span><span>Pronto para retirada</span></li>
+        <li class="etapa"><span class="etapa-marcador">4</span><span>Entregue</span></li>
+      </ol>
+    </section>
+
+    <section class="cartao ds-secao">
+      <h2>8. Ícones e fotografia</h2>
+      <p class="texto-suave">Ícones com traço de 2 px e cantos arredondados. Fotos de estúdio com fundo branco puro, prato de cerâmica bege e luz vinda da esquerda.</p>
+      <div class="ds-icones" style="margin-bottom: 16px;">
+        <span data-icone="cardapio"></span><span data-icone="carrinho"></span><span data-icone="usuario"></span>
+        <span data-icone="local"></span><span data-icone="celular"></span><span data-icone="totem"></span>
+        <span data-icone="computador"></span><span data-icone="pix"></span><span data-icone="cartao"></span>
+        <span data-icone="escudo"></span><span data-icone="cadeado"></span><span data-icone="estrela"></span>
+      </div>
+      <div class="ds-icones">
+        <span class="ds-foto"><img src="img/fotos/tapioca-coco.jpg" alt="Tapioca de coco"></span>
+        <span class="ds-foto"><img src="img/fotos/cuscuz-charque.jpg" alt="Cuscuz com charque"></span>
+        <span class="ds-foto"><img src="img/fotos/bolo-milho.jpg" alt="Bolo de milho"></span>
+        <span class="ds-foto"><img src="img/fotos/canjica.jpg" alt="Canjica"></span>
+        <span class="ds-foto"><img src="img/fotos/suco-caja.jpg" alt="Suco de cajá"></span>
+        <span class="ds-foto"><img src="img/fotos/combo.jpg" alt="Café da manhã completo"></span>
+      </div>
+    </section>
+
+    <section class="cartao ds-secao">
+      <h2>9. Espaçamento, bordas e responsividade</h2>
+      <ul>
+        <li><strong>Espaçamentos:</strong> múltiplos de 4 px (4, 8, 12, 16, 24, 32, 48).</li>
+        <li><strong>Bordas arredondadas:</strong> 8 px (pequeno), 12 px (campos e opções), 20 px (cartões) e botões em formato de pílula.</li>
+        <li><strong>Mobile-first:</strong> o CSS base é para celular; telas a partir de 640 px, 768 px e 960 px ganham mais colunas.</li>
+        <li><strong>Totem:</strong> fontes, botões e áreas de toque maiores (mínimo de 52 px) para uso em pé, com o dedo.</li>
+        <li><strong>Acessibilidade:</strong> foco visível em amarelo, contraste AA e animações desligadas para quem prefere menos movimento.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="rodape"></footer>
+
+  <script src="js/dados.js?v=9"></script>
+  <script src="js/comum.js?v=9"></script>
+</body>
+</html>

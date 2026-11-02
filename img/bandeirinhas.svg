@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" width="120" height="28">
+  <!-- Faixa de bandeirinhas juninas (usada como enfeite repetido) -->
+  <line x1="0" y1="3" x2="120" y2="3" stroke="#EBDFD0" stroke-width="1.5"/>
+  <path d="M6 3 H24 L15 22 Z" fill="#F2B544"/>
+  <path d="M36 3 H54 L45 22 Z" fill="#B5502A"/>
+  <path d="M66 3 H84 L75 22 Z" fill="#3E6B48"/>
+  <path d="M96 3 H114 L105 22 Z" fill="#2D5F8B"/>
+</svg>

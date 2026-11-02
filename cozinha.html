@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2B1D14">
+  <title>Painel da Cozinha - Raízes do Nordeste</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <header class="painel-topo">
+    <div class="container">
+      <div class="painel-titulo">
+        <img src="img/logo.svg" alt="">
+        <div>
+          <strong>Painel da Cozinha</strong>
+          <small>Atendimento e produção</small>
+        </div>
+      </div>
+      <div class="painel-acoes">
+        <span id="nomeEquipe"></span>
+        <a id="linkPainelGerente" href="gerente.html">Painel do Gerente</a>
+        <button class="botao botao-sol botao-pequeno" onclick="sairEquipe()">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container pagina">
+    <div class="pagina-topo">
+      <div>
+        <h1>Fila de pedidos</h1>
+        <p class="texto-suave">Pedidos pagos aguardando produção. Por privacidade, aparece só o primeiro nome do cliente.</p>
+      </div>
+      <div class="campo-filtro">
+        <label for="filtroUnidade">Unidade</label>
+        <select id="filtroUnidade"></select>
+      </div>
+    </div>
+
+    <div class="quadro">
+      <section class="coluna coluna-recebido">
+        <div class="coluna-titulo"><span>Recebidos</span><span id="contaRecebido" class="selo selo-sol">0</span></div>
+        <div id="colunaRecebido"></div>
+      </section>
+      <section class="coluna coluna-preparo">
+        <div class="coluna-titulo"><span>Em preparo</span><span id="contaPreparo" class="selo selo-terracota">0</span></div>
+        <div id="colunaPreparo"></div>
+      </section>
+      <section class="coluna coluna-pronto">
+        <div class="coluna-titulo"><span>Prontos para retirada</span><span id="contaPronto" class="selo selo-verde">0</span></div>
+        <div id="colunaPronto"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="rodape"></footer>
+
+  <script src="js/dados.js?v=9"></script>
+  <script src="js/comum.js?v=9"></script>
+  <script src="js/cozinha.js?v=9"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2B1D14">
+  <title>Painel do Gerente - Raízes do Nordeste</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <header class="painel-topo">
+    <div class="container">
+      <div class="painel-titulo">
+        <img src="img/logo.svg" alt="">
+        <div>
+          <strong>Painel do Gerente</strong>
+          <small>Matriz · Relatórios</small>
+        </div>
+      </div>
+      <div class="painel-acoes">
+        <span id="nomeEquipe"></span>
+        <a href="cozinha.html">Painel da Cozinha</a>
+        <button class="botao botao-sol botao-pequeno" onclick="sairEquipe()">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container pagina">
+    <div class="pagina-topo">
+      <div>
+        <h1>Visão geral da rede</h1>
+        <p class="texto-suave">Dados agrupados, sem identificar clientes (LGPD). Pedidos cancelados não entram no faturamento.</p>
+      </div>
+    </div>
+
+    <div id="indicadores" class="indicadores"></div>
+
+    <div class="grade-relatorios">
+      <section class="cartao">
+        <h2>Vendas por unidade</h2>
+        <div class="tabela-rolagem"><table id="tabelaUnidades"></table></div>
+      </section>
+
+      <section class="cartao">
+        <h2>Produtos mais vendidos</h2>
+        <div class="tabela-rolagem"><table id="tabelaProdutos"></table></div>
+      </section>
+
+      <section class="cartao">
+        <h2>Vendas por estado</h2>
+        <div class="tabela-rolagem"><table id="tabelaEstados"></table></div>
+      </section>
+
+      <section class="cartao">
+        <h2>Pedidos por canal</h2>
+        <div class="tabela-rolagem"><table id="tabelaCanais"></table></div>
+      </section>
+    </div>
+
+    <section class="cartao">
+      <h2>Auditoria</h2>
+      <p class="texto-suave">Cancelamentos, descontos, falhas de pagamento e alterações de privacidade.</p>
+      <div class="tabela-rolagem"><table id="tabelaAuditoria"></table></div>
+    </section>
+  </main>
+
+  <footer id="rodape"></footer>
+
+  <script src="js/dados.js?v=9"></script>
+  <script src="js/comum.js?v=9"></script>
+  <script src="js/gerente.js?v=9"></script>
+</body>
+</html>

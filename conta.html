@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#B5502A">
+  <title>Minha conta - Raízes do Nordeste</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <header id="cabecalho"></header>
+
+  <main class="container pagina">
+    <div class="pagina-topo">
+      <div class="perfil">
+        <span id="avatar" class="avatar"></span>
+        <div>
+          <span class="sobretitulo">Minha conta</span>
+          <h1 id="nomePerfil"></h1>
+        </div>
+      </div>
+      <button id="btnSair" class="botao botao-fantasma botao-pequeno"><span data-icone="sair"></span>Sair</button>
+    </div>
+
+    <div class="layout-lateral">
+      <div class="pilha">
+        <section id="areaFidelidade" class="cartao-fidelidade"></section>
+
+        <section class="cartao">
+          <h2>Meus pedidos</h2>
+          <div id="listaPedidos" class="lista-pedidos"></div>
+        </section>
+
+        <section class="cartao">
+          <h2>Meus dados</h2>
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome">
+          </div>
+          <div class="campo">
+            <label for="telefone">Celular</label>
+            <input type="tel" id="telefone">
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" disabled>
+          </div>
+          <p id="mensagemDados" class="mensagem escondido"></p>
+          <button id="btnSalvarDados" class="botao">Salvar alterações</button>
+        </section>
+      </div>
+
+      <aside class="pilha">
+        <section class="cartao">
+          <h2>Privacidade</h2>
+          <p class="texto-suave">Você decide como seus dados são usados.</p>
+          <label class="opcao-check">
+            <input type="checkbox" id="checkFidelidade">
+            <span><strong>Programa de fidelidade</strong><br>Uso do histórico de pedidos para pontos e descontos</span>
+          </label>
+          <label class="opcao-check">
+            <input type="checkbox" id="checkPromocoes">
+            <span><strong>Promoções</strong><br>Ofertas por e-mail e celular</span>
+          </label>
+          <p id="dataConsentimento" class="ajuda"></p>
+          <p id="mensagemPrivacidade" class="mensagem escondido"></p>
+          <button id="btnSalvarPrivacidade" class="botao botao-secundario botao-bloco" style="margin-top: 12px;">Salvar preferências</button>
+        </section>
+
+        <section class="cartao">
+          <h2>Seus direitos (LGPD)</h2>
+          <div class="acoes-direitos">
+            <button id="btnBaixarDados" class="botao botao-secundario botao-bloco"><span data-icone="download"></span>Baixar meus dados</button>
+            <button id="btnExcluirConta" class="botao botao-perigo botao-bloco"><span data-icone="lixeira"></span>Excluir minha conta</button>
+            <a href="privacidade.html" class="centro">Ler a Política de Privacidade</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="rodape"></footer>
+
+  <script src="js/dados.js?v=9"></script>
+  <script src="js/comum.js?v=9"></script>
+  <script src="js/conta.js?v=9"></script>
+</body>
+</html>

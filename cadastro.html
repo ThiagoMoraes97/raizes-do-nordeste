@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#B5502A">
+  <title>Cadastro - Raízes do Nordeste</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <header id="cabecalho"></header>
+
+  <main class="container pagina">
+    <div class="auth auth-largo">
+      <div class="auth-topo">
+        <img src="img/logo.svg" alt="">
+        <h1>Crie sua conta</h1>
+        <p class="texto-suave">Pedimos só o necessário para o seu pedido. Campos com * são obrigatórios.</p>
+      </div>
+
+      <section class="cartao">
+        <form id="formCadastro" novalidate>
+          <div class="campo">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" autocomplete="name">
+          </div>
+          <div class="campo">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" autocomplete="email" placeholder="voce@email.com">
+          </div>
+          <div class="campo">
+            <label for="telefone">Celular com DDD *</label>
+            <input type="tel" id="telefone" placeholder="(81) 99999-0000" autocomplete="tel">
+          </div>
+          <div class="campo">
+            <label for="nascimento">Data de nascimento (opcional)</label>
+            <input type="date" id="nascimento">
+            <p class="ajuda">Usada apenas para ofertas de aniversário, se você participar do programa de fidelidade.</p>
+          </div>
+          <div class="campo">
+            <label for="senha">Senha * (mínimo 6 caracteres)</label>
+            <input type="password" id="senha" autocomplete="new-password">
+          </div>
+          <div class="campo">
+            <label for="confirmarSenha">Confirmar senha *</label>
+            <input type="password" id="confirmarSenha" autocomplete="new-password">
+          </div>
+
+          <div class="caixa-consentimento">
+            <h3><span data-icone="escudo"></span>Privacidade e consentimento</h3>
+
+            <label class="opcao-check">
+              <input type="checkbox" id="aceiteTermos">
+              <span>* Li e aceito os Termos de Uso e a <a href="privacidade.html" target="_blank">Política de Privacidade</a>.
+              Meus dados serão usados para criar minha conta e processar meus pedidos.</span>
+            </label>
+
+            <label class="opcao-check">
+              <input type="checkbox" id="aceiteFidelidade">
+              <span><strong>Programa Raízes Fiéis (opcional).</strong> Autorizo o uso do meu histórico de pedidos
+              e da minha data de nascimento para calcular pontos e oferecer descontos.</span>
+            </label>
+
+            <label class="opcao-check">
+              <input type="checkbox" id="aceitePromocoes">
+              <span><strong>Promoções (opcional).</strong> Quero receber ofertas por e-mail e celular.</span>
+            </label>
+
+            <p class="ajuda">Você pode mudar essas escolhas ou excluir sua conta quando quiser em "Minha conta".</p>
+          </div>
+
+          <div id="mensagemCadastro" class="mensagem escondido"></div>
+          <button type="submit" class="botao botao-bloco">Criar conta</button>
+        </form>
+
+        <p class="centro" style="margin: 16px 0 0;">Já tem conta? <a href="login.html">Entrar</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer id="rodape"></footer>
+
+  <script src="js/dados.js?v=9"></script>
+  <script src="js/comum.js?v=9"></script>
+  <script src="js/cadastro.js?v=9"></script>
+</body>
+</html>

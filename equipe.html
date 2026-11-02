@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2B1D14">
+  <title>Acesso da equipe - Raízes do Nordeste</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <header class="painel-topo">
+    <div class="container">
+      <div class="painel-titulo">
+        <img src="img/logo.svg" alt="">
+        <div>
+          <strong>Acesso da equipe</strong>
+          <small>Uso interno</small>
+        </div>
+      </div>
+      <a href="index.html">Ir para o site</a>
+    </div>
+  </header>
+
+  <main class="container pagina">
+    <div class="auth">
+      <div class="auth-topo">
+        <h1>Entrar como equipe</h1>
+        <p class="texto-suave">Área restrita a atendentes, cozinha e gerência. Cada perfil vê só o que precisa para o seu trabalho.</p>
+      </div>
+
+      <p id="mensagemEquipe" class="mensagem escondido"></p>
+
+      <!-- Aparece quando já existe alguém da equipe conectado -->
+      <section id="areaConectado" class="cartao escondido">
+        <h2>Você está conectado</h2>
+        <p id="textoConectado" class="texto-suave"></p>
+        <div class="acoes-direitos">
+          <a href="cozinha.html" class="botao botao-bloco">Abrir Painel da Cozinha</a>
+          <a id="linkGerente" href="gerente.html" class="botao botao-secundario botao-bloco">Abrir Painel do Gerente</a>
+          <button class="botao botao-fantasma botao-bloco" onclick="sairEquipe()"><span data-icone="sair"></span>Sair</button>
+        </div>
+      </section>
+
+      <section id="areaLogin" class="cartao">
+        <form id="formEquipe" novalidate>
+          <div class="campo">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" autocomplete="username">
+          </div>
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" autocomplete="current-password">
+          </div>
+          <button type="submit" class="botao botao-bloco"><span data-icone="cadeado"></span>Entrar</button>
+        </form>
+      </section>
+
+      <div class="cartao" style="margin-top: 16px;">
+        <h3>Usuários de teste</h3>
+        <table>
+          <tr><th>Usuário</th><th>Senha</th><th>Pode acessar</th></tr>
+          <tr><td>atendente</td><td>1234</td><td>Painel da Cozinha</td></tr>
+          <tr><td>cozinha</td><td>1234</td><td>Painel da Cozinha</td></tr>
+          <tr><td>gerente</td><td>1234</td><td>Cozinha e Gerente</td></tr>
+        </table>
+        <p class="ajuda">Num sistema real, as contas da equipe seriam criadas pelo gerente e validadas no servidor.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/dados.js?v=9"></script>
+  <script src="js/comum.js?v=9"></script>
+  <script src="js/equipe.js?v=9"></script>
+</body>
+</html>

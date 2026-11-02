@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Símbolo: o sol do sertão nascendo sobre a terra, com raízes por baixo -->
+  <circle cx="24" cy="24" r="24" fill="#B5502A"/>
+  <circle cx="24" cy="22" r="6.5" fill="#F2B544"/>
+  <g stroke="#F2B544" stroke-width="2.6" stroke-linecap="round">
+    <line x1="24" y1="7.5" x2="24" y2="11"/>
+    <line x1="34.5" y1="11.5" x2="32" y2="14"/>
+    <line x1="39" y1="22" x2="35.5" y2="22"/>
+    <line x1="13.5" y1="11.5" x2="16" y2="14"/>
+    <line x1="9" y1="22" x2="12.5" y2="22"/>
+  </g>
+  <g stroke="#FBF6EE" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <line x1="10" y1="30" x2="38" y2="30"/>
+    <path d="M24 30 V40"/>
+    <path d="M24 34 L18.5 38.5"/>
+    <path d="M24 34 L29.5 38.5"/>
+  </g>
+</svg>
