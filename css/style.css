@@ -38,6 +38,9 @@
   --fonte-titulo: "Fraunces", Georgia, serif;
   --fonte-texto: "DM Sans", Arial, Helvetica, sans-serif;
 
+  /* Altura da barra do protótipo (App, Totem, Web); no celular fica menor */
+  --altura-barra-modo: 56px;
+
   /* Bordas arredondadas */
   --raio-p: 8px;
   --raio-m: 12px;
@@ -219,10 +222,10 @@ a:hover {
 
 /* ---------- 4. CABEÇALHO ---------- */
 
-/* top negativo: a barra de modo (40px) some ao rolar e o resto do cabeçalho fica fixo */
+/* top negativo: a barra de modo some ao rolar e o resto do cabeçalho fica fixo */
 .cabecalho {
   position: sticky;
-  top: -40px;
+  top: calc(-1 * var(--altura-barra-modo));
   z-index: 20;
   background-color: var(--branco);
   border-bottom: 1px solid var(--borda);
@@ -2090,8 +2093,8 @@ input[type="radio"] {
 }
 
 .barra-modo-links .icone {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
 }
 
 .campo-filtro {
@@ -2383,7 +2386,7 @@ tr:last-child td {
 .barra-modo {
   background-color: #1B120C;
   color: #CDB9A3;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .barra-modo .container {
@@ -2391,12 +2394,12 @@ tr:last-child td {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  height: 40px;
+  height: var(--altura-barra-modo);
 }
 
 .seletor-modo {
   display: flex;
-  padding: 3px;
+  padding: 4px;
   border-radius: var(--raio-total);
   background-color: rgba(255, 255, 255, 0.08);
 }
@@ -2405,14 +2408,14 @@ tr:last-child td {
   display: flex;
   align-items: center;
   gap: 6px;
-  height: 28px;
-  padding: 0 12px;
+  height: 34px;
+  padding: 0 14px;
   border: none;
   border-radius: var(--raio-total);
   background: none;
   color: #CDB9A3;
   font-family: var(--fonte-texto);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
@@ -2428,8 +2431,8 @@ tr:last-child td {
 }
 
 .seletor-modo .icone {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 
 /* Botão da unidade na barra marrom do cabeçalho */
@@ -2568,6 +2571,18 @@ tr:last-child td {
 
 /* Celular: a barra do protótipo fica mais compacta, com textos curtos e numa linha só */
 @media (max-width: 480px) {
+  :root {
+    --altura-barra-modo: 48px;
+  }
+
+  .barra-modo {
+    font-size: 12px;
+  }
+
+  .seletor-modo {
+    padding: 3px;
+  }
+
   .barra-modo-rotulo,
   .seletor-modo .icone,
   .barra-modo-links .texto-completo {
