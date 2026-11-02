@@ -11,6 +11,11 @@ function mostrarDestaques() {
   document.getElementById("listaDestaques").innerHTML = html;
 }
 
+// Chamada pelo comum.js sempre que o carrinho muda: atualiza os contadores dos destaques
+function aoMudarCarrinho() {
+  mostrarDestaques();
+}
+
 function mostrarCategorias() {
   // Pega cada categoria uma vez só, junto com o primeiro produto dela (para a foto)
   const categorias = [];

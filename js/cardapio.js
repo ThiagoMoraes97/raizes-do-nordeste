@@ -98,8 +98,9 @@ function atualizarBarraCarrinho() {
   barra.classList.remove("escondido");
 }
 
-// Chamada pelo comum.js sempre que um item é adicionado
+// Chamada pelo comum.js sempre que o carrinho muda: atualiza os contadores dos cartões e a barra
 function aoMudarCarrinho() {
+  mostrarProdutos();
   atualizarBarraCarrinho();
 }
 

@@ -41,7 +41,7 @@ function mostrarCarrinho() {
   mostrarResumo();
 }
 
-// Os botões − e + usam alterarQuantidade (comum.js)
+// Os botões − e + usam alterarQuantidade (comum.js), a mesma função do cartão do produto
 function aoMudarCarrinho() {
   mostrarCarrinho();
 }

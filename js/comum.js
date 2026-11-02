@@ -558,6 +558,16 @@ function htmlCartaoProduto(produto) {
   let selo = "";
   let botao = '<button class="botao-adicionar" onclick="pedirProduto(' + produto.id + ')" aria-label="Adicionar ' + produto.nome + '">' + icone("mais") + "</button>";
 
+  // Se o produto já está no carrinho, o botão vira um contador (− quantidade +)
+  const quantidade = quantidadeDoProduto(produto.id);
+  if (quantidade > 0) {
+    botao = '<div class="contador-produto">' +
+      '<button onclick="alterarQuantidade(' + produto.id + ', -1)" aria-label="Diminuir ' + produto.nome + '">−</button>' +
+      "<span>" + quantidade + "</span>" +
+      '<button onclick="alterarQuantidade(' + produto.id + ', 1)" aria-label="Aumentar ' + produto.nome + '">+</button>' +
+      "</div>";
+  }
+
   if (produto.junino) {
     selo = '<span class="selo selo-verde">Junino</span>';
     if (!ehPeriodoJunino()) {
@@ -623,7 +633,18 @@ function adicionarAoCarrinho(id) {
   mostrarAvisoRapido(produto.nome + " no carrinho");
 }
 
-// Botões − e + de quantidade; com quantidade zero o item sai do carrinho
+// Quantas unidades de um produto já estão no carrinho
+function quantidadeDoProduto(id) {
+  const carrinho = lerDados("carrinho", []);
+  for (let i = 0; i < carrinho.length; i++) {
+    if (carrinho[i].id === id) {
+      return carrinho[i].quantidade;
+    }
+  }
+  return 0;
+}
+
+// Botões − e + do cartão do produto; com quantidade zero o item sai do carrinho
 function alterarQuantidade(id, valor) {
   const carrinho = lerDados("carrinho", []);
   for (let i = 0; i < carrinho.length; i++) {
@@ -639,7 +660,7 @@ function alterarQuantidade(id, valor) {
   carrinhoMudou();
 }
 
-// Atualiza o contador do menu e avisa a página que o carrinho mudou
+// Atualiza o contador do menu e avisa a página (cardápio e início redesenham os cartões)
 function carrinhoMudou() {
   montarCabecalho();
   if (typeof aoMudarCarrinho === "function") {

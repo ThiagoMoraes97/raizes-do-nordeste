@@ -1484,6 +1484,42 @@ input[type="radio"] {
   transform: scale(1.06);
 }
 
+/* Contador do cartão (− quantidade +): aparece no lugar do botão depois que o produto é adicionado */
+.contador-produto {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  border-radius: var(--raio-total);
+  background-color: var(--terracota);
+  color: var(--branco);
+  box-shadow: 0 6px 14px rgba(181, 80, 42, 0.35);
+  flex-shrink: 0;
+}
+
+.contador-produto button {
+  width: 42px;
+  height: 46px;
+  border: none;
+  border-radius: var(--raio-total);
+  background: none;
+  color: var(--branco);
+  font-family: var(--fonte-texto);
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contador-produto button:hover {
+  background-color: var(--terracota-escura);
+}
+
+.contador-produto span {
+  min-width: 22px;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .produto.indisponivel .produto-imagem img {
   opacity: 0.45;
   filter: grayscale(1);
@@ -2856,6 +2892,20 @@ html.modo-totem .botao {
 html.modo-totem .botao-adicionar {
   width: 60px;
   height: 60px;
+}
+
+html.modo-totem .contador-produto,
+html.modo-totem .contador-produto button {
+  height: 60px;
+}
+
+html.modo-totem .contador-produto button {
+  width: 54px;
+  font-size: 26px;
+}
+
+html.modo-totem .contador-produto span {
+  font-size: 20px;
 }
 
 html.modo-totem .chip {
