@@ -617,14 +617,34 @@ function adicionarAoCarrinho(id) {
   }
 
   salvarDados("carrinho", carrinho);
-  montarCabecalho();
-  // A página do cardápio usa isso para atualizar a barra do carrinho
-  if (typeof aoMudarCarrinho === "function") {
-    aoMudarCarrinho();
-  }
+  carrinhoMudou();
 
   const produto = buscarProduto(id);
   mostrarAvisoRapido(produto.nome + " no carrinho");
+}
+
+// Botões − e + de quantidade; com quantidade zero o item sai do carrinho
+function alterarQuantidade(id, valor) {
+  const carrinho = lerDados("carrinho", []);
+  for (let i = 0; i < carrinho.length; i++) {
+    if (carrinho[i].id === id) {
+      carrinho[i].quantidade = carrinho[i].quantidade + valor;
+      if (carrinho[i].quantidade <= 0) {
+        carrinho.splice(i, 1);
+      }
+      break;
+    }
+  }
+  salvarDados("carrinho", carrinho);
+  carrinhoMudou();
+}
+
+// Atualiza o contador do menu e avisa a página que o carrinho mudou
+function carrinhoMudou() {
+  montarCabecalho();
+  if (typeof aoMudarCarrinho === "function") {
+    aoMudarCarrinho();
+  }
 }
 
 function linkMenu(endereco, nomeIcone, texto, extra) {

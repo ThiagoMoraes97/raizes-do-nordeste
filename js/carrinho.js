@@ -41,19 +41,8 @@ function mostrarCarrinho() {
   mostrarResumo();
 }
 
-function alterarQuantidade(id, valor) {
-  const carrinho = lerDados("carrinho", []);
-  for (let i = 0; i < carrinho.length; i++) {
-    if (carrinho[i].id === id) {
-      carrinho[i].quantidade = carrinho[i].quantidade + valor;
-      if (carrinho[i].quantidade <= 0) {
-        carrinho.splice(i, 1);
-      }
-      break;
-    }
-  }
-  salvarDados("carrinho", carrinho);
-  montarCabecalho();
+// Os botões − e + usam alterarQuantidade (comum.js)
+function aoMudarCarrinho() {
   mostrarCarrinho();
 }
 
