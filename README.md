@@ -5,6 +5,10 @@ Projeto Multidisciplinar (Trilha Front-End) - UNINTER 2026.
 Protótipo navegável do sistema de pedidos da rede de lanchonetes "Raízes do Nordeste",
 feito com HTML, CSS e JavaScript puros, usando dados mockados e `localStorage` no lugar do back-end.
 
+**Site publicado:** https://thiagomoraes97.github.io/raizes-do-nordeste/
+
+![Página inicial do site Raízes do Nordeste](img/readme/pagina-inicial.jpg)
+
 ## Como rodar
 
 Basta publicar a pasta no GitHub Pages ou abrir com um servidor local, por exemplo:
